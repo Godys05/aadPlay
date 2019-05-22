@@ -1,0 +1,148 @@
+<header>
+    <!-- DropDown -->
+      <ul id="dropdown1" class="dropdown-content">
+          <li><a class="dropDownElement" [routerLink]="['/profile']">Perfil</a></li>
+          <li class="divider"></li>
+          <li><a class="dropDownElement" href="#!">Salir</a></li>
+        </ul>
+  
+    <!-- Modal Structure -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <h4>Contactar a instructor</h4>
+        <div class="row">
+          <div class="col s6 m6 l6"> <p class="flow-text">Tarea:</p> </div>
+          <div class="col s6 m6 l6"> <p class="flow-text">Evaluación Diagnóstico</p> </div>
+        </div>
+        <div class="row">
+          <div class="col s6 m6 l6"><p class="flow-text">Pregunta lo que desees:</p></div>
+          <div class="col s6 m6 l6"> <br> <textarea name="contactText" id="artH1" cols="30" rows="60"></textarea></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn light-green darken-2">Enviar</a>
+      </div>
+    </div>
+
+    <div id="gradeModal" class="modal">
+      <div class="modal-content">
+        <h4>Asignar calificación</h4>
+        <div class="row">
+          <div class="col s6 m6 l6"> <p class="flow-text">Calificación:</p> </div>
+          <div class="col s6 m6 l6"> <br> <input type="text"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn light-green darken-2">Asignar</a>
+      </div>
+    </div>
+    
+      <nav>
+          <div class="nav-wrapper light-green darken-1">
+            <a href="#" class="brand-logo right"></a>
+            <ul id="nav-mobile" class="left">
+              <li><a [routerLink]="['/dashboardTeacher']">Dashboard</a></li>
+              <li><a [routerLink]="['']">Generar reportes</a></li>
+              <li><a class="dropdown-trigger" data-target="dropdown1"><i class="material-icons">account_circle arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+        </nav>
+  </header>
+  <main>
+    <div id=dashTeacherMain class="container main center-align">
+      <div id="hwToDo" class="container content">
+
+        <table>
+          <caption><h2 class= "left-align">Tareas por Revisar</h2></caption>
+          <thead>
+            <tr>
+              <th>Nombre del alumno</th>
+              <th>Nombre de la tarea</th>
+              <th>Fecha límite de entrega</th>
+              <th>Contactar alumno</th>
+              <th>Tarea</th>
+              <th>Notas</th>
+              <th>Asignar calificación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Piplio Cambrio</td>
+              <td>Examen Diagnóstico Bloque I</td>
+              <td>23/05/2019</td>
+              <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+              <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+              <td><a data-target="gradeModal" class="waves-effect waves-light btn blue modal-trigger">Asignar calificación</a></td>
+            </tr>
+            <tr>
+              <td>Juan Villalpando</td>
+              <td>Examen Diagnóstico Bloque I</td>
+              <td>21/05/2019</td>
+              <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+              <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+              <td><a data-target="gradeModal" class="waves-effect waves-light btn blue modal-trigger">Asignar calificación</a></td>
+            </tr>
+            <tr>
+              <td>Rosa Villalpando</td>
+              <td>Examen Diagnóstico Bloque I</td>
+              <td>21/05/2019</td>
+              <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+              <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+              <td><a data-target="gradeModal" class="waves-effect waves-light btn blue modal-trigger">Asignar calificación</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <caption><h2 class= "left-align">Tareas Revisadas</h2></caption>
+          <thead>
+            <tr>
+              <th>Nombre del alumno</th>
+              <th>Nombre de la tarea</th>
+              <th>Fecha límite de entrega</th>
+              <th>Contactar alumno</th>
+              <th>Tarea</th>
+              <th>Notas</th>
+              <th>Calificación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Piplio Cambrio</td>
+              <td>Examen Diagnóstico Bloque I</td>
+              <td>23/05/2019</td>
+              <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+              <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+              <td><p class="flow-text center-align">10 <a class="modal-trigger tooltipped" data-position="top" data-tooltip="Editar calificación..." data-target="gradeModal"><i class="material-icons prefix">create</i></a></p></td>
+            </tr>
+            <tr>
+              <td>Juan Villalpando</td>
+              <td>Examen Diagnóstico Bloque I</td>
+              <td>21/05/2019</td>
+              <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+              <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+              <td><p class="flow-text center-align">10 <a class="modal-trigger tooltipped" data-position="top" data-tooltip="Editar calificación..." data-target="gradeModal"><i class="material-icons prefix">create</i></a></p></td>
+            </tr>
+            <tr>
+              <td>Rosa Villalpando</td>
+              <td>Examen Diagnóstico Bloque I</td>
+              <td>21/05/2019</td>
+              <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+              <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+              <td><p class="flow-text center-align">10 <a class="modal-trigger tooltipped" data-position="top" data-tooltip="Editar calificación..." data-target="gradeModal"><i class="material-icons prefix">create</i></a></p></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+  
+  </footer>

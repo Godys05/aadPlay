@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+// import { User } from '../models/user.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  apiUrl = 'http://localhost:9000';
+
+  constructor(private http: HttpClient) { }
+
+  signUp(user: any) {
+    return this.http.post<{ message: string, errorCode: number }>(`${this.apiUrl}/user/signup`, user);
+  }
+
+  logIn(user: any) {
+    return this.http.post<{ message: string, token: string, email: string, errorCode: number }>(`${this.apiUrl}/user/login`, user);
+  }
+
+  logOut() {
+
+  }
+}

@@ -1,0 +1,158 @@
+<header>
+    <nav>
+        <div class="nav-wrapper light-green darken-1">
+          <a href="#" class="brand-logo right"></a>
+          <ul id="nav-mobile" class="left">
+              <!-- <ul id="nav-mobile" class="left hide-on-med-and-down"> -->
+            <li><a [routerLink]="['']">Inicio</a></li>
+            <li><a href="#homeNosotros">Nosotros</a></li>
+            <li><a href="#homeVG">Visión</a></li>
+            <li><a href="#homeVG">Objetivo</a></li>
+            <li><a href="#homeCursos">Cursos</a></li>
+            <li class="light-green darken-2"><a [routerLink]="['/login']" >Únete | Inicia Sesión</a></li>
+            <li><a [routerLink]="['/dashboardStudent']">Estudiantes (temp)</a></li>
+            <li><a [routerLink]="['/dashboardTeacher']">Profesores (temp)</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="fixed-action-btn">
+        <a class="waves-effect btn-floating btn-large orange">
+          <i class="large material-icons">arrow_upward</i>
+        </a>
+      </div>
+</header>
+<main>
+  <div id="homeImage" class="scrollspy">
+
+  </div>
+  <section id="homeNosotros" class="container scrollspy"> 
+      <div class="container">
+        <h1 class="center-align">Nosotros</h1>
+        <div class="video-container">
+          <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>      
+        <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi rem eaque consequatur quibusdam unde, ducimus minima porro repellendus aliquid at eos amet saepe cum, cumque labore veritatis. Pariatur eveniet recusandae minima voluptas assumenda facere in placeat unde eligendi tempora inventore cum impedit iste adipisci quae fugit itaque, est natus hic, architecto aperiam! Quam quae quasi consectetur accusantium tenetur earum ex quis doloremque eveniet, nulla, amet cum eum quaerat praesentium dolores rerum omnis facilis delectus suscipit at itaque aut quibusdam natus reprehenderit. Voluptates provident quas optio quidem quia et deserunt ea quasi deleniti similique dicta atque perferendis omnis, sunt sed.</p>
+      </div> 
+  </section>
+
+  <section id="homeVG" class="container scrollspy center-align"> 
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <div class="col s12 m12 l12"> <i class="large material-icons prefix">public</i> </div>
+        <div class="col s12 m12 l12"><h1>Visión</h1></div>
+        <div class="col s12 m12 l12"> <p class="flow-text">Lorem, ipsum dolor sit amet consectetur adipisicing sit amet consectetur sit amet consectetur elit. Minima, voluptatem ex ipsum debitis aliquid necessitatibus?</p> </div>
+      </div>
+      <div class="col s12 m6 l6">
+        <div class="col s12 m12 l12"> <i class="large material-icons prefix">group</i> </div>
+        <div class="col s12 m12 l12"><h1>OBjetivo</h1></div>
+        <div class="col s12 m12 l12"> <p class="flow-text">Lorem, ipsum dolor sit amet consectetur adipisicing sit amet consectetur sit amet consectetur elit. Minima, voluptatem ex ipsum debitis aliquid necessitatibus?</p> </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="homeCursos" class="container scrollspy">
+  <div class="container center-align">
+    <h1 class="center-align">Nuestros Cursos</h1>
+            
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="assets/img/Literature.jpg">
+              <span class="card-title">Literatura</span>
+            </div>
+            <div class="card-reveal">
+              <div class="row">
+                <div class="col s12 m12 l12">
+                  <p class="card-title grey-text text-darken-4">Literatura <i class="small material-icons">close</i></p>
+                </div>
+                <div class="col s12 m12 l12">
+                  <i class="medium material-icons">account_circle</i>
+                </div>
+                <div class="col s12 m12 l12">
+                  <p class="flow-text">Benito Camelo</p>
+                </div>
+                <div class="col s12 m12 l12">
+                  <a class="waves-effect waves-light btn light-green darken-3" [routerLink]="['/homeCourse']">Ir a Curso</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="assets/img/DigitalDrawing.jpg">
+              <span class="card-title">Dibujo Digital</span>
+            </div>
+            <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Dibujo Digital<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="assets/img/Dancing.jpg">
+              <span class="card-title">Danza</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+      </div>   
+            
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="assets/img/Origami.jpg">
+              <span class="card-title">Origami</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="assets/img/Singing.jpg">
+              <span class="card-title">Canto</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Dibujo Digital<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="assets/img/ArtHistory.jpg">
+              <span class="card-title">Historia del Arte</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+<footer>
+
+</footer>

@@ -1,0 +1,105 @@
+<section class="container">
+  <div class="row">
+
+    <div id="registerContainer"class="col s12 m5 l5 ">
+
+      <div class="row">
+        <div class="col s12 m12 l12 center-align"></div>
+        <h3>¡Bienvenido a AAD Play</h3>
+      </div>
+
+      <div class="row">
+          <div class="col s6 m6 l6">
+              <h5>Nombre</h5>
+            </div>
+            <div class="col s6 m6 l6">
+                <input type="text">
+            </div>
+      </div>
+
+      <div class="row">
+          <div class="col s6 m6 l6">
+              <h5>Apellido</h5>
+            </div>
+            <div class="col s6 m6 l6">
+                <input type="text">
+            </div>
+      </div>
+
+      <div class="row">
+          <div class="col s6 m6 l6">
+              <h5>Correo</h5>
+            </div>
+            <div class="col s6 m6 l6">
+                <input type="text">
+            </div>
+      </div>
+
+      <div class="row">
+          <div class="col s6 m6 l6">
+              <h5>Contraseña</h5>
+            </div>
+            <div class="col s6 m6 l6">
+                <input type="password">
+            </div>
+      </div>
+
+      <div class="row">
+          <div class="col s6 m6 l6">
+              <h5>Modalidad</h5>
+          </div>
+          <div class="col s6 m6 l6">
+              <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option value="student">Estudiante</option>
+                    <option value="teacher">Profesor</option>
+                  </select>
+                </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m12 l12 right-align">
+            <a class="waves-effect waves-light btn light-green darken-1">Registrarse!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col m1 l1"></div>
+
+    <div id="logInContainer" class="col s12 m5 l5">
+
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <h3>Inicia Sesión</h3>
+        </div>
+
+        <div class="row">
+            <div class="col s6 m6 l6">
+                <h5>Correo</h5>
+              </div>
+              <div class="col s6 m6 l6">
+                  <input type="text">
+              </div>
+        </div>
+        
+        <div class="row">
+            <div class="col s6 m6 l6">
+                <h5>Contraseña</h5>
+              </div>
+              <div class="col s6 m6 l6">
+                  <input type="password">
+              </div>
+        </div> 
+
+        <div class="row">
+          <div class="col s12 m12 l12 right-align">
+              <a class="waves-effect waves-light btn light-green darken-1" (click)="logIn()">Iniciar Sesión</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
