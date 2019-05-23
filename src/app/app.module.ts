@@ -6,24 +6,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { DashBoardComponent } from './dash-board/dash-board.component';
 import { ProfileComponent } from './profile/profile.component';
-import { DashBoardTeacherComponent } from './dash-board-teacher/dash-board-teacher.component';
 import { MyCoursesComponent } from './my-courses/my-courses.component';
-import { HomeCourseComponent } from './home-course/home-course.component';
 import { ExamComponent } from './exam/exam.component';
+import { HeaderComponent } from './header/header.component';
+import { CourseComponent } from './course/course.component';
+import { CoursesComponent } from './courses/courses.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    HeaderComponent,
     HomeComponent,
-    DashBoardComponent,
+    CourseComponent,
+
+    DashboardComponent,
+
+    CoursesComponent,
     ProfileComponent,
-    DashBoardTeacherComponent,
     MyCoursesComponent,
-    HomeCourseComponent,
-    ExamComponent
+    ExamComponent,
   ],
   imports: [
     BrowserModule,

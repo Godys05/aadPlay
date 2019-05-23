@@ -1,0 +1,32 @@
+<nav>
+  <div class="nav-wrapper light-green darken-1">
+    <a href="#" class="brand-logo right"></a>
+    <ul id="nav-mobile" class="left">
+      <!-- <ul id="nav-mobile" class="left hide-on-med-and-down"> -->
+        <!-- Not Logged In -->
+      <li *ngIf="!isLoggedIn"><a [routerLink]="['']">Inicio</a></li>
+      <li *ngIf="!isLoggedIn"><a [routerLink]="['']" fragment="homeNosotros">Nosotros</a></li>
+      <li *ngIf="!isLoggedIn"><a [routerLink]="['']" fragment="homeVG">Visión</a></li>
+      <li *ngIf="!isLoggedIn"><a [routerLink]="['']" fragment="homeVG">Objetivo</a></li>
+      <li *ngIf="!isLoggedIn"><a [routerLink]="['']" fragment="courses">Cursos</a></li>
+      <li *ngIf="!isLoggedIn" class="light-green darken-2"><a [routerLink]="['/login']" >Únete | Inicia Sesión</a></li>
+      
+      <!-- User -->
+      <li *ngIf="isLoggedIn && role === 'user'"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+      <li *ngIf="isLoggedIn && role === 'user'"><a [routerLink]="['/myCourses']">Mis Cursos</a></li>
+      <li *ngIf="isLoggedIn && role === 'user'"><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">account_circle arrow_drop_down</i></a></li>
+      
+      <!-- Teacher -->
+      <li *ngIf="isLoggedIn && role === 'teacher'"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+      <li *ngIf="isLoggedIn && role === 'teacher'"><a [routerLink]="['']">Generar reportes</a></li>
+      <li *ngIf="isLoggedIn && role === 'teacher'"><a class="dropdown-trigger" data-target="dropdown1"><i class="material-icons">account_circle arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- DropDown -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a class="dropDownElement" [routerLink]="['/profile']">Perfil</a></li>
+  <li class="divider"></li>
+  <li><a class="dropDownElement" href="#!">Salir</a></li>
+</ul>

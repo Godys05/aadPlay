@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-declare let $:any;
+declare let $: any;
+
 @Component({
-  selector: 'app-dash-board-teacher',
-  templateUrl: './dash-board-teacher.component.html',
-  styleUrls: ['./dash-board-teacher.component.sass']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.sass']
 })
-export class DashBoardTeacherComponent implements OnInit {
+export class HeaderComponent implements OnInit {
+  isLoggedIn = true;
+  role = 'user';
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 declare let $: any;
 @Component({
@@ -8,13 +9,22 @@ declare let $: any;
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  private fragment: string;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
     $( document ).ready(() => {
-      $('.scrollspy').scrollSpy();
+      // $('.scrollspy').scrollSpy();
       $('.fixed-action-btn').floatingActionButton();
     });
+  }
+
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
   }
 
 }

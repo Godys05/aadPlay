@@ -1,0 +1,275 @@
+<!-- Teacher -->
+<!-- Modal Structure -->
+<!-- <div id="contactModal" class="modal">
+  <div class="modal-content">
+    <h4>Contactar a instructor</h4>
+    <div class="row">
+      <div class="col s6 m6 l6"> <p class="flow-text">Tarea:</p> </div>
+      <div class="col s6 m6 l6"> <p class="flow-text">Evaluación Diagnóstico</p> </div>
+    </div>
+    <div class="row">
+      <div class="col s6 m6 l6"><p class="flow-text">Pregunta lo que desees:</p></div>
+      <div class="col s6 m6 l6"> <br> <textarea name="contactText" id="artH1" cols="30" rows="60"></textarea></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect btn light-green darken-2">Enviar</a>
+  </div>
+</div>
+
+<div id="gradeModal" class="modal">
+  <div class="modal-content">
+    <h4>Asignar calificación</h4>
+    <div class="row">
+      <div class="col s6 m6 l6"> <p class="flow-text">Calificación:</p> </div>
+      <div class="col s6 m6 l6"> <br> <input type="text"></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect btn light-green darken-2">Asignar</a>
+  </div>
+</div> -->
+
+
+<div *ngIf="role === 'teacher'" id=dashTeacherMain class="container main center-align">
+  <div id="hwToDo" class="container content">
+
+    <table>
+      <caption><h2 class= "left-align">Tareas por Revisar</h2></caption>
+      <thead>
+        <tr>
+          <th>Nombre del alumno</th>
+          <th>Nombre de la tarea</th>
+          <th>Fecha límite de entrega</th>
+          <th>Contactar alumno</th>
+          <th>Tarea</th>
+          <th>Notas</th>
+          <th>Asignar calificación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Piplio Cambrio</td>
+          <td>Examen Diagnóstico Bloque I</td>
+          <td>23/05/2019</td>
+          <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+          <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+          <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+          <td><a data-target="gradeModal" class="waves-effect waves-light btn blue modal-trigger">Asignar calificación</a></td>
+        </tr>
+        <tr>
+          <td>Juan Villalpando</td>
+          <td>Examen Diagnóstico Bloque I</td>
+          <td>21/05/2019</td>
+          <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+          <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+          <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+          <td><a data-target="gradeModal" class="waves-effect waves-light btn blue modal-trigger">Asignar calificación</a></td>
+        </tr>
+        <tr>
+          <td>Rosa Villalpando</td>
+          <td>Examen Diagnóstico Bloque I</td>
+          <td>21/05/2019</td>
+          <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+          <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+          <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+          <td><a data-target="gradeModal" class="waves-effect waves-light btn blue modal-trigger">Asignar calificación</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <caption><h2 class= "left-align">Tareas Revisadas</h2></caption>
+      <thead>
+        <tr>
+          <th>Nombre del alumno</th>
+          <th>Nombre de la tarea</th>
+          <th>Fecha límite de entrega</th>
+          <th>Contactar alumno</th>
+          <th>Tarea</th>
+          <th>Notas</th>
+          <th>Calificación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Piplio Cambrio</td>
+          <td>Examen Diagnóstico Bloque I</td>
+          <td>23/05/2019</td>
+          <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+          <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+          <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+          <td><p class="flow-text center-align">10 <a class="modal-trigger tooltipped" data-position="top" data-tooltip="Editar calificación..." data-target="gradeModal"><i class="material-icons prefix">create</i></a></p></td>
+        </tr>
+        <tr>
+          <td>Juan Villalpando</td>
+          <td>Examen Diagnóstico Bloque I</td>
+          <td>21/05/2019</td>
+          <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+          <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+          <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+          <td><p class="flow-text center-align">10 <a class="modal-trigger tooltipped" data-position="top" data-tooltip="Editar calificación..." data-target="gradeModal"><i class="material-icons prefix">create</i></a></p></td>
+        </tr>
+        <tr>
+          <td>Rosa Villalpando</td>
+          <td>Examen Diagnóstico Bloque I</td>
+          <td>21/05/2019</td>
+          <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+          <td><a class="waves-effect waves-light btn light-green darken-3">Descargar</a></td>
+          <td><textarea name="" id="" cols="15" rows="2"></textarea></td>
+          <td><p class="flow-text center-align">10 <a class="modal-trigger tooltipped" data-position="top" data-tooltip="Editar calificación..." data-target="gradeModal"><i class="material-icons prefix">create</i></a></p></td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+
+<!-- User -->
+<div *ngIf="role === 'user'" id=dashStudentMain class="container main center-align">
+  <div id="hwToDo" class="container content">
+      <table>
+        <caption><h2 class= "left-align">Tareas</h2></caption>
+          <thead>
+
+            <tr>
+                <th>Nombre de la tarea</th>
+                <th>Materia</th>
+                <th>Fecha Límite de Entrega</th>
+                <th>Contactar instructor</th>
+                <th>Hacer/Entregar tarea</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <td>Examen Diagnóstico Bloque I</td>
+              <td>Historia de Arte</td>
+              <td>23/05/2019</td>
+              <td><a data-target="contactModal" class="waves-effect waves-light btn light-green darken-1 modal-trigger">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3" [routerLink]="['/exam']">Ir a Evaluación</a></td>
+            </tr>
+            <tr>
+              <td>Investigación. Arte en la prehistoria</td>
+              <td>Historia de Arte</td>
+              <td>25/05/2019</td>
+              <td><a class="waves-effect waves-light btn light-green darken-1">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3 modal-trigger" data-target="researchModal">Subir Archivo</a></td>
+            </tr>
+            <tr>
+              <td>Lectura. Entorno de PhotoShop</td>
+              <td>Dibujo Digital</td>
+              <td>30/05/2019</td>
+              <td><a class="waves-effect waves-light btn light-green darken-1">Contactar</a></td>
+              <td><a class="waves-effect waves-light btn light-green darken-3">Descargar Lectura</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+            <caption><h2 class= "left-align">Tareas Vencidas</h2></caption>
+              <thead>
+  
+                <tr>
+                    <th>Nombre de la tarea</th>
+                    <th>Materia</th>
+                    <th>Fecha Límite de Entrega</th>
+                    <th>Contactar Instructor</th>
+                    <th>Hacer/Entregar tarea</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>Examen Diagnóstico Bloque I</td>
+                  <td>Historia de Arte</td>
+                  <td>17/05/2019</td>
+                  <td><a class="waves-effect waves-light btn yellow darken-3">Contactar</a></td>
+                  <td><a class="waves-effect waves-light btn yellow darken-4">Ir a Evaluación</a></td>
+                </tr>
+                <tr>
+                  <td>Investigación. Arte en la prehistoria</td>
+                  <td>Historia de Arte</td>
+                  <td>18/05/2019</td>
+                  <td><a class="waves-effect waves-light btn yellow darken-3">Contactar</a></td>
+                  <td><a class="waves-effect waves-light btn yellow darken-4">Subir Archivo</a></td>
+                </tr>
+                <tr>
+                  <td>Lectura. Entorno de PhotoShop</td>
+                  <td>Dibujo Digital</td>
+                  <td>15/05/2019</td>
+                  <td><a class="waves-effect waves-light btn yellow darken-3">Contactar</a></td>
+                  <td><a class="waves-effect waves-light btn yellow darken-4">Descargar Lectura</a></td>
+                </tr>
+              </tbody>
+        </table>
+
+        <table>
+            <caption><h2 class= "left-align">Tareas Completadas</h2></caption>
+              <thead>
+  
+                <tr>
+                    <th>Nombre de la tarea</th>
+                    <th>Materia</th>
+                    <th>Fecha Límite de Entrega</th>
+                    <th>Contactar Instructor</th>
+                    <th>Calificación</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>Examen Diagnóstico Bloque I</td>
+                  <td>Historia de Arte</td>
+                  <td>17/05/2019</td>
+                  <td><a class="waves-effect waves-light btn green darken-2">Contactar</a></td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Investigación. Arte en la prehistoria</td>
+                  <td>Historia de Arte</td>
+                  <td>18/05/2019</td>
+                  <td><a class="waves-effect waves-light btn green darken-2">Contactar</a></td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Lectura. Entorno de PhotoShop</td>
+                  <td>Dibujo Digital</td>
+                  <td>15/05/2019</td>
+                  <td><a class="waves-effect waves-light btn green darken-2">Contactar</a></td>
+                  <td><p class="light-green lighten-2">COMPLETADA</p></td>
+                </tr>
+              </tbody>
+        </table>
+  </div>
+</div>
+<!-- Modal Structure -->
+<!-- <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <h4>Contactar a instructor</h4>
+      <div class="row">
+        <div class="col s6 m6 l6"> <p class="flow-text">Tarea:</p> </div>
+        <div class="col s6 m6 l6"> <p class="flow-text">Evaluación Diagnóstico</p> </div>
+      </div>
+      <div class="row">
+        <div class="col s6 m6 l6"><p class="flow-text">Pregunta lo que desees:</p></div>
+        <div class="col s6 m6 l6"> <br> <textarea name="contactText" id="artH1" cols="30" rows="60"></textarea></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn light-green darken-2">Enviar</a>
+    </div>
+  </div>
+  
+<div id="researchModal" class="modal">
+  <div class="modal-content">
+    <h4>Subir archivo de investigación</h4>
+    <div class="row">
+      <div class="col s6 m6 l6"><p class="flow-text">NOMBRE DEL ARCHIVO CARGADO</p></div>
+      <div class="col s6 m6 l6"> <br> <a class="waves-effect btn light-green darken-3 fullWidth">cargar archivo...</a></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect btn light-green darken-2">Enviar</a>
+  </div>
+</div> -->
