@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt-nodejs');
 const jwt = require('jsonwebtoken');
 
 exports.createUser = (req, res, next) => {
+    console.log(req.body);
   bcrypt.hash(req.body.password, bcrypt.genSaltSync(10), null, (err, hash) => {
       if (err) {
           console.log(err);
@@ -11,6 +12,7 @@ exports.createUser = (req, res, next) => {
 
       const newUser = new User({
           name: req.body.name,
+          lastName: req.body.lastName,
           email: req.body.email,
           password: hash,
           role: req.body.role

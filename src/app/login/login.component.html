@@ -8,62 +8,80 @@
         <h3>¡Bienvenido a AAD Play</h3>
       </div>
 
-      <div class="row">
-          <div class="col s6 m6 l6">
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+          <div class="row">
+            <div class="col s6 m6 l6">
               <h5>Nombre</h5>
             </div>
             <div class="col s6 m6 l6">
-                <input type="text">
+                <input type="text" formControlName="nombre"> 
             </div>
-      </div>
-
-      <div class="row">
-          <div class="col s6 m6 l6">
+          </div>
+    
+          <div class="row">
+            <div class="col s6 m6 l6">
               <h5>Apellido</h5>
             </div>
             <div class="col s6 m6 l6">
-                <input type="text">
+              <input type="text" formControlName="apellido">
             </div>
-      </div>
-
-      <div class="row">
-          <div class="col s6 m6 l6">
+          </div>
+    
+          <div class="row">
+            <div class="col s6 m6 l6">
               <h5>Correo</h5>
             </div>
             <div class="col s6 m6 l6">
-                <input type="text">
+              <input type="text" formControlName="correo">
             </div>
-      </div>
-
-      <div class="row">
-          <div class="col s6 m6 l6">
+          </div>
+    
+          <div class="row">
+            <div class="col s6 m6 l6">
               <h5>Contraseña</h5>
             </div>
             <div class="col s6 m6 l6">
-                <input type="password">
+              <input type="password" formControlName="password">
             </div>
-      </div>
-
-      <div class="row">
-          <div class="col s6 m6 l6">
+          </div>
+    
+          <div class="row">
+            <div class="col s6 m6 l6">
               <h5>Modalidad</h5>
-          </div>
-          <div class="col s6 m6 l6">
+            </div>
+            <div class="col s6 m6 l6">
               <div class="input-field col s12">
-                  <select>
-                    <option value="" disabled selected>Elige una opción</option>
-                    <option value="student">Estudiante</option>
-                    <option value="teacher">Profesor</option>
-                  </select>
-                </div>
+                <select (change)="changeModality($event)" formControlName="role">
+                  <option value="" disabled selected>Elige una opción</option>
+                  <option value="student">Estudiante</option>
+                  <option value="teacher">Profesor</option>
+                </select>
+              </div>
+            </div>
           </div>
-      </div>
 
-      <div class="row">
-        <div class="col s12 m12 l12 right-align">
-            <a class="waves-effect waves-light btn light-green darken-1">Registrarse!</a>
-        </div>
-      </div>
+          <div [hidden]="modality !== 'teacher'" class="row">
+            <div class="col s6 m6 l6">
+              <h5>Curso</h5>
+            </div>
+            <div class="col s6 m6 l6">
+              <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected>Elige una opción</option>
+                  <option value="student">Estudiante</option>
+                  <option value="teacher">Profesor</option>
+                </select>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col s12 m12 l12 right-align">
+              <button class="waves-effect waves-light btn light-green darken-1">Registrarse!</button>
+            </div>
+          </div>
+      </form>
     </div>
 
     <div class="col m1 l1"></div>
