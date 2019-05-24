@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/services/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 declare let $: any;
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   registerForm: FormGroup;
   modality = null;
 
-  constructor( private authService: AuthService) {
+  constructor( private authService: AuthService, private router: Router) {
 
   }
 
@@ -72,6 +73,8 @@ export class LoginComponent implements OnInit {
     };
     this.authService.logIn(user).subscribe((res) => {
       if (res.errorCode===0) {
+        this.authService.setToken(res.token);
+        this.router.navigate(['dashboard']);
         console.log("Exito.");
       }
       else {

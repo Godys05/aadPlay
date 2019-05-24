@@ -43,7 +43,7 @@ exports.login = (req, res, next) => {
                       console.log(err);
                       return res.json({ message: 'An error ocurred. Incorrect email or password.', token: null, email: null, errorCode: 1 });
                   }
-                  const token = jwt.sign({ email: user.email, uid: user._id }, 'MyAppIsAwesome', { expiresIn: "12h" });
+                  const token = jwt.sign({ email: user.email, uid: user._id, role: user.role }, 'MyAppIsAwesome', { expiresIn: "12h" });
                   return res.json({ message: 'Login successful', token: token, email: user.email, errorCode: 0 });
               });
           }

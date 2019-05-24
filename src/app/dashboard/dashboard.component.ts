@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/services/auth.service';
+import { Router } from '@angular/router';
 
 declare let $: any;
 
@@ -11,9 +13,12 @@ export class DashboardComponent implements OnInit {
 
   role = 'user';
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+    if (!this.authService.isUserLoggedIn()) {
+      this.router.navigate(['home']);
+    }
     $('.modal').modal();
     $('.dropdown-trigger').dropdown();
   }
